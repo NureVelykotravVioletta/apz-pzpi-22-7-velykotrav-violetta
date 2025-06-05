@@ -1,0 +1,17 @@
+.logoStyle {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logoImg {
+  height: 48px;
+  width: 70px;
+}
+
+.logoText {
+  color: #407bff;
+  font-size: 18px;
+}

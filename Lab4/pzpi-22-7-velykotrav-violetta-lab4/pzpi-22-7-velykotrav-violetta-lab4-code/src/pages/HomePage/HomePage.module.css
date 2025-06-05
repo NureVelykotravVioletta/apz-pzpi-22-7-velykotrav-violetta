@@ -1,0 +1,188 @@
+/*=================Mobile=================*/
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  background-image: url("../../assets/images/home-page/bubbles-home-page/Mobile-Bubbles-Home-Page@1x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  margin-top: 52px;
+}
+
+.dailyBox {
+  margin-top: -24px;
+  margin-left: 20px;
+  width: 164px;
+  height: 74px;
+}
+.homeBottle {
+  width: 280px;
+  height: 208px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../../assets/images/home-page/bottle-home-page/Mobile-Botle-Home-screen@1x.png");
+}
+
+@media (min-resolution: 192dpi),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .homeContainer {
+    background-image: url("../../assets/images/home-page/bubbles-home-page/Mobile-Bubbles-Home-Page@2x.png");
+  }
+
+  .homeBottle {
+    background-image: url("../../assets/images/home-page/bottle-home-page/Mobile-Botle-Home-screen@2x.png");
+  }
+}
+
+.waterRatioPanel {
+  margin-top: 40px;
+  height: 134px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tableWrapper {
+  margin-top: 40px;
+  width: 280px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ecf2ff;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 14px #407bff4d;
+}
+
+/*=================Tablet=================*/
+@media screen and (min-width: 768px) {
+  .homeContainer {
+    width: 764px;
+    max-width: 768px;
+    height: 1280px;
+    margin-top: 24px;
+    background-image: url("../../assets/images/home-page/bubbles-home-page/Tablet-Bubbles-Home-Page@1x.png");
+    background-size: contain;
+    position: relative;
+  }
+
+  .homeBottle {
+    width: 518px;
+    height: 386px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../../assets/images/home-page/bottle-home-page/Tablet-Botle-Home-screen@1x.png");
+    position: absolute;
+    top: 16px;
+    left: 125px;
+  }
+
+  @media (min-resolution: 192dpi),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .homeContainer {
+      background-image: url("../../assets/images/home-page/bubbles-home-page/Tablet-Bubbles-Home-Page@2x.png");
+    }
+
+    .homeBottle {
+      background-image: url("../../assets/images/home-page/bottle-home-page/Tablet-Botle-Home-screen@2x.png");
+    }
+  }
+
+  .dailyBox {
+    position: absolute;
+    height: 76px;
+    margin-top: 16px;
+    margin-left: 32px;
+    z-index: 999;
+  }
+
+  .waterRatioPanel {
+    position: absolute;
+    width: 704px;
+    height: 90px;
+    top: 418px;
+    margin-top: 0;
+    left: 32px;
+  }
+
+  .tableWrapper {
+    position: absolute;
+    width: 704px;
+    top: 548px;
+    margin-top: 0;
+    left: 32px;
+  }
+}
+
+/*=================Desk=================*/
+@media screen and (min-width: 1440px) {
+  .homeContainer {
+    background-position: top center;
+    width: 1440px;
+    max-width: 1440px;
+    height: 582px;
+    margin-top: 58px;
+    background-image: url("../../assets/images/home-page/bubbles-home-page/Desk-Bubbles-Home-Page@1x.png");
+    position: relative;
+  }
+
+  .homeBottle {
+    position: absolute;
+    background-image: url("../../assets/images/home-page/bottle-home-page/Desk-Botle-Home-screen@1x.png");
+    width: 738px;
+    height: 548px;
+    left: 38.67px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -36px;
+  }
+
+  @media (min-resolution: 192dpi),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .homeContainer {
+      background-image: url("../../assets/images/home-page/bubbles-home-page/Desk-Bubbles-Home-Page@2x.png");
+    }
+
+    .homeBottle {
+      background-image: url("../../assets/images/home-page/bottle-home-page/Desk-Botle-Home-screen@2x.png");
+    }
+  }
+
+  .dailyBox {
+    position: absolute;
+    height: 76px;
+    top: -6px;
+    left: 112px;
+    margin-left: 0;
+    margin-top: 0;
+    z-index: 999;
+  }
+
+  .waterRatioPanel {
+    position: absolute;
+    width: 592px;
+    height: 90px;
+    top: 508px;
+    margin-top: 24px;
+    left: 112px;
+  }
+
+  .tableWrapper {
+    position: absolute;
+    width: 592px;
+    top: 548px;
+    margin-top: 0;
+    left: 744px;
+    top: -36px;
+  }
+}
