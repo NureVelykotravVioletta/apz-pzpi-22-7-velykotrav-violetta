@@ -1,6 +1,7 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://team-project-b-watter-app.onrender.com";
+axios.defaults.baseURL =
+  "https://apz-pzpi-22-7-velykotrav-violetta-1.onrender.com";
 
 export function setAuthHeader(token) {
   axios.defaults.headers.common.Authorization = token;
