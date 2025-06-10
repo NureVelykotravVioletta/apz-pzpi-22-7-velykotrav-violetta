@@ -197,7 +197,7 @@ const DailyNormaModal = () => {
             <p className={css.total}>
               Необхідна кількість води в літрах на день:
             </p>
-            <strong className={css.screen}>{recommendedNorma} L</strong>
+            <strong className={css.screen}>{recommendedNorma} Л</strong>
           </div>
         </div>
         <div>
@@ -214,7 +214,7 @@ const DailyNormaModal = () => {
         </div>
         {error && <div className={css.errorMessage}>{error}</div>}
         <button className={css.saveBtn} onClick={handleSaveClick}>
-          Save
+          Зберегти
         </button>
       </div>
     </div>

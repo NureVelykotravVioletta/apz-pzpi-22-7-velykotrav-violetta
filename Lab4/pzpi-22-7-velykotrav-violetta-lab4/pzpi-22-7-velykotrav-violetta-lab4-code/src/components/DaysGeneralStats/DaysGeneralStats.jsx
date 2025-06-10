@@ -15,11 +15,11 @@ export default function DaysGeneralStats({ day }) {
             Daily norma: <span className={css.textColorAccent}>2L</span>
           </li>
           <li className={css.dayStatusItem}>
-            Fulfillment of the daily norm:{" "}
+            Виконання добової норми:{" "}
             <span className={css.textColorAccent}>0%</span>
           </li>
           <li className={css.dayStatusItem}>
-            How many servings of water:{" "}
+            Кількість порцій води:{" "}
             <span className={css.textColorAccent}>0</span>
           </li>
         </ul>
@@ -32,17 +32,17 @@ export default function DaysGeneralStats({ day }) {
       <ul className={css.dayStatus}>
         <li className={css.dayStatusDate}>{day}</li>
         <li className={css.dayStatusItem}>
-          Daily norma:{" "}
+          Добова норма:{" "}
           <span className={css.textColorAccent}>{dayData.dailyNorm}</span>
         </li>
         <li className={css.dayStatusItem}>
-          Fulfillment of the daily norm:{" "}
+          Виконання добової норми:{" "}
           <span className={css.textColorAccent}>
             {dayData.percentageConsumed}
           </span>
         </li>
         <li className={css.dayStatusItem}>
-          How many servings of water:{" "}
+          Кількість порцій води:{" "}
           <span className={css.textColorAccent}>{dayData.entries}</span>
         </li>
       </ul>

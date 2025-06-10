@@ -68,14 +68,12 @@ export const TodayWaterItem = ({ amount, date, onDelete, onEdit }) => {
               <use href={`${icons}#icon-cross`}></use>
             </svg>
             <div className={css.deleteQuestion}>
-              <p className={css.deleteEntry}>Delete entry</p>
-              <p className={css.sure}>
-                Are you sure you want to delete the entry?
-              </p>
+              <p className={css.deleteEntry}>Видалити дані</p>
+              <p className={css.sure}>Ви впевнені, що хочете видалити дані?</p>
             </div>
             <div className={css.choiseBtns}>
-              <button onClick={handleCloseDelete}>Cancel</button>
-              <button onClick={onDelete}>Delete</button>
+              <button onClick={handleCloseDelete}>Закрити</button>
+              <button onClick={onDelete}>Видалити</button>
             </div>
           </div>
         </div>

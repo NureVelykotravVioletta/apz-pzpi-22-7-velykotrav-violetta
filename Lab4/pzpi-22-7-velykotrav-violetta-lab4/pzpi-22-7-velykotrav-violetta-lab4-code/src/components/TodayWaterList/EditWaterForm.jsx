@@ -3,7 +3,7 @@ import css from "./addwaterlist.module.css";
 import icons from "../../assets/icons.svg";
 import { useDispatch } from "react-redux";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; 
+import "react-toastify/dist/ReactToastify.css";
 import { updateWaterRecord } from "../../redux/water/waterOperations";
 
 export const EditWaterForm = ({ onClose, editingRecord }) => {
@@ -34,11 +34,17 @@ export const EditWaterForm = ({ onClose, editingRecord }) => {
     const formAmount = Number(amount);
 
     if (formAmount <= 0 || formAmount > 5000) {
-      toast.error("Put correct walue of water!"); 
+      toast.error("Put correct walue of water!");
       return;
     }
 
-    dispatch(updateWaterRecord({ id: editingRecord._id, amount: formAmount, time: date }))
+    dispatch(
+      updateWaterRecord({
+        id: editingRecord._id,
+        amount: formAmount,
+        time: date,
+      })
+    )
       .unwrap()
       .then(() => {
         toast.success("Record updated!");
@@ -56,7 +62,7 @@ export const EditWaterForm = ({ onClose, editingRecord }) => {
 
   return (
     <form className={css.sectionModal} onSubmit={handleSubmit}>
-      <p className={css.sectionHeader}>Edit the entered amount of water</p>
+      <p className={css.sectionHeader}>Редагувати зазначену кількість води</p>
       <button className={css.crossBtn} type="button" onClick={onClose}>
         <svg>
           <use href={`${icons}#icon-cross`}></use>
@@ -68,13 +74,15 @@ export const EditWaterForm = ({ onClose, editingRecord }) => {
             <use href={`${icons}#icon-glass`}></use>
           </svg>
           <div className={css.timeAmount}>
-            <span className={css.waterAmount}>{amount ? `${amount} ml` : "0 ml"}</span>
+            <span className={css.waterAmount}>
+              {amount ? `${amount} мл` : "0 мл"}
+            </span>
             <span className={css.spanTime}>{date}</span>
           </div>
         </div>
         <div className={css.amountCorrection}>
-          <p className={css.enteredData}>Correct entered data:</p>
-          <p>Amount of water:</p>
+          <p className={css.enteredData}>Виправити введене значення:</p>
+          <p>Кількість води:</p>
           <div className={css.amountCalc}>
             <button
               type="button"
@@ -86,7 +94,7 @@ export const EditWaterForm = ({ onClose, editingRecord }) => {
                 <use href={`${icons}#icon-decrement`}></use>
               </svg>
             </button>
-            <p className={css.spanAmount}>{amount ? `${amount} ml` : "0 ml"}</p>
+            <p className={css.spanAmount}>{amount ? `${amount} мл` : "0 мл"}</p>
             <button
               type="button"
               className={css.amountBtnInc}
@@ -99,7 +107,7 @@ export const EditWaterForm = ({ onClose, editingRecord }) => {
             </button>
           </div>
           <div className={css.inputWrapper}>
-            <p>Recording time:</p>
+            <p>Зазначений час:</p>
             <input
               className={css.editFormInput}
               type="time"
@@ -109,7 +117,7 @@ export const EditWaterForm = ({ onClose, editingRecord }) => {
             />
           </div>
           <div className={css.inputWrapper}>
-            <p className={css.numberTopic}>Enter the value of the water used:</p>
+            <p className={css.numberTopic}>Введіть кількість вжитої води:</p>
             <input
               className={css.editFormInput}
               type="number"
@@ -122,8 +130,8 @@ export const EditWaterForm = ({ onClose, editingRecord }) => {
       </div>
       <div className={css.saveBtnWrapper}>
         <div className={css.finalAmountSave}>
-          <p>{amount === 0 || amount === "" ? "" : `${amount} ml`}</p>
-          <button type="submit">Save</button>
+          <p>{amount === 0 || amount === "" ? "" : `${amount} мл`}</p>
+          <button type="submit">Зберегти</button>
         </div>
       </div>
 
